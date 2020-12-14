@@ -1,4 +1,4 @@
-let noms = [
+let names = [
     "Jacque", "Louise",
     "Mathéo", "Carla",
     "Fernand", "Héloise",
@@ -15,7 +15,7 @@ let noms = [
     "Trevor", "Tiffani",
     "Killian", "Julie"
 ];
-let lieux = [
+let places = [
     "a Momignies", "a Chimay",
     "a Virelle", "a Monceau",
     "a Seloignes", "a Charlerois",
@@ -34,7 +34,7 @@ let lieux = [
     "au mileur de nul part",
     "pas vraiment sur terre",
 ];
-let objets = [
+let things = [
     "une table", "une chaise",
     "un mur", "une voiture",
     "une pomme", "une fraise",
@@ -59,27 +59,27 @@ let temperatures = [
     "en pleine canicule", "proche de 100 degrès",
     "5 degrès", "24 degrès"
 ];
-let verbes = [
+let action = [
     "manger", "dormir sur", "courir après",
     "casser", "perdre", "lancer"
 ];
 
 let max;
-function aletatoire(max){
+function random(max){
     return Math.trunc(Math.random() * max)
 }
 
 let div = document.createElement("div");
 document.body.append(div);
 
-let nom = document.getElementById("nom");
+let name = document.getElementById("nom");
 
 document.getElementById("bouton").addEventListener("click", function (){
-    let choixNom = noms[aletatoire(noms.length-1)];
-    let choixLieu = lieux[aletatoire(lieux.length-1)];
-    let choixObjet = objets[aletatoire(objets.length-1)];
-    let choixTemperature = temperatures[aletatoire(temperatures.length-1)];
-    let choixVerbe = verbes[aletatoire(verbes.length-1)];
+    let randomName = names[random(names.length-1)];
+    let randomPlace= places[random(places.length-1)];
+    let randomThing = things[random(things.length-1)];
+    let randomTemperature = temperatures[random(temperatures.length-1)];
+    let randomAction = action[random(action.length-1)];
 
-    div.innerHTML += "Il fait "+choixTemperature+", "+nom.value+ " a vu "+" "+choixNom+" "+choixVerbe+" "+choixObjet+" "+choixLieu + "<br>";
+    div.innerHTML += "Il fait "+randomTemperature+", "+name.value+ " a vu "+" "+randomName+" "+randomAction+" "+randomThing+" "+randomPlace + "<br>";
 });
