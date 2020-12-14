@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    font-size: 2rem;
+    background-color: #ade1e2;
+}
+
+div{
+    margin: auto;
+    padding: 2rem;
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 4rem;
+    background-color: #668cb5;
+    color: #221dce;
+}
+
